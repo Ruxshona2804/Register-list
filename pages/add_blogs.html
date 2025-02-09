@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Blog qo'shish</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #a7f9e9, #5ce798);
+            height: 100vh; /* Растянуть фон на всю высоту экрана */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        };
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div  class="bg-white w-[600px] p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-center text-3xl font-semibold text-green-500 mb-4">Yangi Blog Qo'shish</h2>
+        <form id="blogForm" class="space-y-4">
+            <label for="title" class="block font-medium">Sarlavha:</label>
+            <input type="text" id="title" required class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            
+            <label for="category" class="block font-medium">Kategoriya:</label>
+            <select id="category" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            
+            <label for="description" class="block font-medium">Tavsif:</label>
+            <textarea id="description" rows="4" required class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+            
+            <label for="image" class="block font-medium">Rasm:</label>
+            <input type="file" id="image" accept="image/*" required class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            
+            <button type="submit" class="w-full p-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Yuborish</button>
+            <a type="submit"  class="w-full p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 inline-block mx-auto text-center transition" href="../pages/blogs.html">Ortga qaytish</a>
+        </form>
+    </div>
+
+</body>
+<script src="../js/add_blogs.js"></script>
+</html>

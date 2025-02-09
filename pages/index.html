@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uz" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Ro'yxatdan o'tish</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #A7D7F9, #6C5CE7);
+            height: 100vh; /* Растянуть фон на всю высоту экрана */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        };
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class=" dark:bg-gray-900 flex items-center justify-center min-h-screen transition duration-300">
+
+    <div class=" container  w-full max-w-3xl bg-sky-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+        <h1 class="text-[40px] font-bold text-center text-blue-700 dark:text-white mb-6">
+            Ro'yxatdan o'tish
+        </h1>
+
+        <!-- Кнопка переключения темного режима -->
+        <div class="flex justify-center mb-4">
+            <button onclick="darkMode()"
+                class="border active:bg-gray-900 p-3 rounded-lg bg-gray-200 dark:bg-gray-700 dark:text-white transition duration-300">
+                black/white
+            </button>
+        </div>
+
+        <form class="space-y-4">
+            <div>
+                <label for="full_name" class="block text-gray-600 dark:text-gray-300 mb-1">F.I.O</label>
+                <input type="text" id="full_name" placeholder="F.I.O kiriting"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+            </div>
+
+            <div>
+                <label for="phone_number" class="block text-gray-600 dark:text-gray-300 mb-1">Telefon raqam</label>
+                <input type="number" id="phone_number" placeholder="Telefon raqamingizni kiriting"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+            </div>
+
+            <div>
+                <label for="password" class="block text-gray-600 dark:text-gray-300 mb-1">Parol kiriting</label>
+                <input type="password" id="password" placeholder="Parolingizni kiriting"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+            </div>
+
+            <div>
+                <label for="password2" class="block text-gray-600 dark:text-gray-300 mb-1">Parolingizni qayta tasdiqlang</label>
+                <input type="password" id="password2" placeholder="Parolingizni tasdiqlang"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+            </div>
+
+            <div>
+                <label for="avatar" class="block text-gray-600 dark:text-gray-300 mb-1">Avatar kiriting</label>
+                <input type="file" id="avatar"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+            </div>
+        </form>
+
+        <div class="flex justify-center">
+            <button onclick="register()"
+                class="w-full bg-blue-500 text-white py-2 mt-2 rounded-lg active:bg-blue-800 transition duration-300">
+                Ro'yxatdan o'tish
+            </button>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="../pages/login.html"
+                class="w-full bg-blue-500 text-white py-2 rounded-lg active:bg-blue-800 transition duration-300 mt-3 text-center">
+                Tizimga kirish
+            </a>
+        </div>
+    </div>
+
+   
+
+    <script>
+        let html = document.documentElement;
+        function darkMode(){
+            html.classList.toggle('dark')
+            html.classList.toggle('light')
+        }
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

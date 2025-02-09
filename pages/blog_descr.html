@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #a7f9c0, #5ce781);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        };
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <title>Blog haqida</title>
+</head>
+
+<body class="bg-blue-200 flex items-center justify-center min-h-screen">
+   <div>
+    <div class=" rounded-lg w-[600px]" id="blog-detail"></div>
+    <section  class="mt-6  min-h-screen">
+        <h2 class="text-xl font-bold mb-3">Kommentariyalar</h2>
+        <div id="comments" class="space-y-3"></div>
+    </section>
+   </div>
+
+    <script src="../js/blog_descr.js"></script>
+</body>
+
+</html>

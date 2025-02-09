@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloglar ro'yxati</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #edeff1, #8bc6ea);
+            
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        };
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+</head>
+<body class="bg-gray-100">
+    <div class="container w-11/12 max-w-6xl mx-auto py-6">
+        <h1 class="font-bold text-center text-[60px] uppercase text-blue-700">Bloglar ro'yxati</h1>
+        <a  class="font-bold bg-blue-600 text-center text-xl border rounded-md inline-block mt-2 p-6 active:bg-blue-900 text-white" href="../pages/add_blogs.html">Blog qo'shish</a>
+
+        <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6" id="blog-list">
+        </div>
+    </div>
+
+    <script src="../js/blogs.js"></script>
+</body>
+</html>
