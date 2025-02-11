@@ -28,8 +28,7 @@ async function register() {
         
            if (res) {
              window.location.pathname = `/pages/login.html`
-         }
-        
+         }   
     } catch (error) {
         alert(error.message)
 

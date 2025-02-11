@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const blogItem = document.createElement("div");
                 blogItem.classList.add("blog-item", "bg-blue-50", "p-6", "rounded-xl", "shadow-xl", "max-w-lg");
                 blogItem.innerHTML = `
-                    <img class="w-full h-40 object-cover rounded-xl shadow-lg mb-4" src="${blog.image}" alt="Blog rasm" width="200">
+                    <img class="w-full h-40 object-cover rounded-xl shadow-lg mb-4" src="${blog?.image}" alt="Blog rasm" width="200">
                     <h2 class="text-gray-700 font-bold">${blog.title}</h2>
                     <p class="text-gray-700 font-semibold"><strong>Kategoriya:</strong> ${blog.category}</p>
                     <p class="text-gray-700 font-semibold"><strong>Sana:</strong> ${blog.date_created}</p>
