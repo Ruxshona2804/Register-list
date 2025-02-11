@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: "class",
+            darkMode: "class", 
             theme: {
                 extend: {
                     colors: {
@@ -18,7 +18,7 @@
                     }
                 }
             }
-        }
+        };
     </script>
     <title>Ro'yxatdan o'tish</title>
 
@@ -33,7 +33,9 @@
             font-family: Arial, sans-serif;
         }
 
-        ;
+        .dark body {
+            background: linear-gradient(to right, #7badd2, #29225c);
+        }
 
         .container {
             text-align: center;
@@ -45,7 +47,7 @@
     </style>
 </head>
 
-<body class=" dark:bg-black/70 dark:text-white flex items-center justify-center min-h-screen transition duration-300">
+<body class=" dark:bg-black-500 dark:text-white flex items-center justify-center min-h-screen transition duration-300">
 
     <div
         class=" container  w-full max-w-3xl bg-sky-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
@@ -53,7 +55,7 @@
             <h1 class="text-[40px] font-bold text-center text-blue-700 dark:text-white mb-6">
                 Ro'yxatdan o'tish
             </h1>
-            <button onclick="darkMode()"
+            <button id="darkModeButton"
                 class="px-3 py-2 rounded-lg bg-white dark:bg-gray-700 dark:text-white transition mb-5 hover:bg-gray-200 dark:hover:bg-gray-600">
                 <i id="darkModeIcon" class="fa-solid fa-moon"></i>
             </button>
@@ -111,17 +113,7 @@
 
 
     <script src="../js/main.js"></script>
-    <script>
-        function darkMode() {
-    document.documentElement.classList.toggle("dark");
-    let icon = document.getElementById("darkModeIcon");
-    if (document.documentElement.classList.contains("dark")) {
-        icon.classList.replace("fa-moon", "fa-sun");
-    } else {
-        icon.classList.replace("fa-sun", "fa-moon");
-    }
-}
-    </script>
+
 </body>
 
 </html>

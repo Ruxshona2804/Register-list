@@ -36,3 +36,26 @@ async function register() {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let html = document.documentElement;
+    let icon = document.getElementById("darkModeIcon");
+    let darkMode = localStorage.getItem("darkMode");
+
+    // Dark mode holatini tiklash
+    if (darkMode === "dark") {
+        html.classList.add("dark");
+        if (icon) icon.classList.replace("fa-moon", "fa-sun");
+    }
+
+    // Tugma bosilganda Dark Mode o'zgarishi
+    document.getElementById("darkModeButton").addEventListener("click", function () {
+        html.classList.toggle("dark");
+        if (html.classList.contains("dark")) {
+            localStorage.setItem("darkMode", "dark");
+            if (icon) icon.classList.replace("fa-moon", "fa-sun");
+        } else {
+            localStorage.setItem("darkMode", "light");
+            if (icon) icon.classList.replace("fa-sun", "fa-moon");
+        }
+    });
+});

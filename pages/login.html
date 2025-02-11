@@ -1,51 +1,84 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Ro'yxatdan o'tish</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #A7D7F9, #6C5CE7);
-            height: 100vh; /* Растянуть фон на всю высоту экрана */
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        };
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
-</head>
-<body class="bg-gray-100 flex items-center justify-center   min-h-screen px-4">
-
-    <div class="w-full max-w-[800px] bg-white p-6 rounded-2xl shadow-xl">
-        <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Tizimga kirish</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class", 
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                }
+            };
+        </script>
+            <title>Ro'yxatdan o'tish</title>
         
+            <style>
+                body {
+                    background: linear-gradient(to right, #A7D7F9, #6C5CE7);
+                    height: 100vh;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: Arial, sans-serif;
+                }
+        
+        .dark body {
+            background: linear-gradient(to right,  #7badd2, #29225c);
+        }
+                .container {
+                    text-align: center;
+                    background: rgba(255, 255, 255, 0.8);
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                }
+            </style>
+</head>
+
+<body class="dark:bg-black-500 dark:text-white flex items-center justify-center min-h-screen transition duration-300">
+
+    <div class="container  w-full max-w-3xl bg-sky-100  dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+        <div class=" flex items-center justify-center gap-4">
+            <h1 class="text-2xl font-bold text-center  dark:text-white text-gray-800 mb-6">Tizimga kirish</h1>
+            <button id="darkModeButton"
+                class="px-3 py-2 rounded-lg bg-white dark:bg-gray-700 dark:text-white transition mb-5 hover:bg-gray-200 dark:hover:bg-gray-600">
+                <i id="darkModeIcon" class="fa-solid fa-moon"></i>
+            </button>
+        </div>
         <form class="space-y-4">
             <div>
-                <label for="phone_number" class="block text-gray-600 font-medium mb-1">Telefon raqamingizni kiriting</label>
-                <input type="tel" id="phone_number" placeholder="Telefon raqamingizni kiriting" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <label for="phone_number" class="block dark:text-gray-300 text-gray-600 font-medium mb-1">Telefon
+                    raqamingizni kiriting</label>
+                <input type="tel" id="phone_number" placeholder="Telefon raqamingizni kiriting"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
             </div>
 
             <div>
-                <label for="password" class="block text-gray-600 font-medium mb-1">Parolni kiriting</label>
-                <input type="password" id="password" placeholder="Parolingizni kiriting" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <label for="password" class="block dark:text-gray-300 text-gray-600 font-medium mb-1">Parolni
+                    kiriting</label>
+                <input type="password" id="password" placeholder="Parolingizni kiriting"
+                    class="w-full p-2 border rounded-lg dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
             </div>
 
         </form>
-        <button type="button" onclick="login()" class="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition duration-300 shadow-md">
+        <button type="button" onclick="login()"
+            class="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition duration-300 shadow-md">
             Tizimga kirish
         </button>
     </div>
 
     <script src="../js/login.js"></script>
 </body>
+
 </html>
